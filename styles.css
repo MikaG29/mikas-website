@@ -1,121 +1,171 @@
-body{
-    font-family: 'Arial', sans-serif;
+/* ===== Grundlegende Stile ===== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --accent-color: #f0f0f0;
+    --text-dark: #333333;
+    --spacing: 1.5rem;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary-color);
+    color: var(--text-dark);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-header{
-    background-color: black;
-    color: white;
+/* ===== Header ===== */
+header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: var(--spacing);
     text-align: center;
-    padding: 50px;
-    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-h1{
-    font-size: 50px;
-    margin-top: 5px;
+h1 { 
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
 }
 
-.infos{
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 75%;
+h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
 }
 
-nav{
-    margin-top: 10px;
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
 }
 
-button{
-    font-size: 15px;
-    border: none;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-h2{
-    font-size: 40px;
-    padding-top: 0px;
-}
-
-button:hover{
-    background-color: gray;
-    color: white;
-}
-
-main{
-    padding: 100px;
-    flex: 1;
-}
-
-h3{
-    font-size: 40px;
-    text-align: center;
-}
-
-.mannschaft{
-    width: 100%;
+/* ===== Navigation ===== */
+nav {
     display: flex;
-}
-.spieler{
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 25%;
-    padding-top: 0px;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 1.5rem 0;
 }
 
-.team-image{
-    width: 75%;
-    padding: 20px;
-    align-self: center;
-    overflow: hidden;
-    
+.nav-button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-footer{
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-    padding: 30px;
+.nav-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* ===== Hauptinhalt ===== */
+main {
+    flex: 1;
+    padding: var(--spacing);
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
 }
-.spieltage{
-    width: 26.5%;
-    padding-top: 20px;
+
+/* ===== Spieler/Mannschaftssektion ===== */
+.mannschaft {
+    display: grid;
+    gap: var(--spacing);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-details .content {
-    padding: 12px 16px;
-    background-color: #fff;
+.spieler {
+    background: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.kontakt{
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px;
+.team-image {
+    width: 100%;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    font-size: 20px;
-    padding: 20px;
-    color: #000000;
-    
+    border: 2px solid var(--secondary-color);
 }
 
-.spiele{
-    padding-left: 15px;
+.team-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Spielplan ===== */
+.spielplan {
+    display: grid;
+    gap: 1rem;
+}
+
+.spielplan p {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* ===== Kontaktsektion ===== */
+.kontakt {
+    background: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    margin: var(--spacing) 0;
+}
+
+.kontakt a {
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: var(--spacing);
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    :root {
+        --spacing: 1rem;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    .mannschaft {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image {
+        order: -1;
+    }
 }

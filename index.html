@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SG Hegensberg-Liebersbronn</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>SG Hegensberg-Liebersbronn</h1>
         <nav>
-            <button onclick="location.href='#verein'">Verein</button>
-            <button onclick="location.href='a-jugend.html'">A-Jugend</button>
-            <button onclick="location.href='b-jugend.html'">B-Jugend</button>
-            <button onclick="location.href='spielplan.html'">Spielplan</button>
-            <button onclick="location.href='#kontakt'">Kontakt</button>
+            <a href="#verein" class="nav-button">Verein</a>
+            <a href="a-jugend.html" class="nav-button">A-Jugend</a>
+            <a href="b-jugend.html" class="nav-button">B-Jugend</a>
+            <a href="spielplan.html" class="nav-button">Spielplan</a>
+            <a href="#kontakt" class="nav-button">Kontakt</a>
         </nav>
     </header>
+
     <main>
         <section id="verein">
             <h2>Verein</h2>
-            <p class="infos">Die SG Hegensberg-Liebersbronn ist eine Handball-Spielgemeinschaft aus Esslingen am Neckar, entstanden im Jahr 2000 durch den Zusammenschluss der Handballabteilungen des TV Hegensberg und des TV Liebersbronn. Der Verein bietet ein breites Angebot für alle Altersklassen – von der Jugend bis zu den Aktiven – und ist in der Region fest etabliert. Die erste Männermannschaft spielt in der Verbandsliga, während auch die Frauen- und Jugendteams starke Leistungen zeigen. Neben dem sportlichen Erfolg setzt die SG auf Nachwuchsförderung und moderne Vereinsstrukturen, um eine starke Gemeinschaft für Spieler, Fans und Unterstützer zu schaffen.</p>
+            <div class="infos">
+                <p>Die SG Hegensberg-Liebersbronn ist eine Handball-Spielgemeinschaft aus Esslingen am Neckar...</p>
+            </div>
         </section>
-        
+
         <section id="kontakt">
             <h2>Kontakt</h2>
-            <p class="kontakt">
-                Email: sg_heli@gmail.com <br>
-                <br>Instagram: <a href="https://www.instagram.com/sg_heli_mja/" target="_blank">sg_heli_mja</a><br>
-                <br>Standort: <a href="https://www.google.com/maps/place/Sporthalle+R%C3%B6merstra%C3%9Fe,+R%C3%B6merstra%C3%9Fe+11,+73732+Esslingen+am+Neckar/data=!4m2!3m1!1s0x410be702d5fdc489:0xac8c12d8c93fff0c?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEyMS4xMDIYACDXggMqLSw5NDIxNjQwNyw0NzA3NTkxNSw5NDIwNzUwNiw0NzA4NDM5Myw5NDIxMzIwMEICREU%3D" target="_blank">Sporthalle Römerstraße</a>
-
-            </p>
+            <div class="kontakt">
+                <p>Email: <a href="mailto:sg_heli@gmail.com">sg_heli@gmail.com</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/sg_heli_mja/" target="_blank">@sg_heli_mja</a></p>
+                <p>Standort: <a href="https://maps.example.com">Sporthalle Römerstraße</a></p>
+            </div>
         </section>
     </main>
-    <footer onclick="location.href='impressum.html'">Impressum</footer>
+
+    <footer>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+    </footer>
 </body>
 </html>
