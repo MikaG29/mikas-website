@@ -169,3 +169,47 @@ footer a {
         order: -1;
     }
 }
+
+/* ===== Mobile Optimierungen ===== */
+@media (max-width: 768px) {
+    :root {
+        --spacing: 1rem;
+    }
+
+    h1 { 
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .mannschaft {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .team-image {
+        order: 1 !important;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .spieler {
+        width: 100%;
+        order: 2;
+    }
+
+    .spieler p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0.8rem 0;
+    }
+
+    nav {
+        margin: 1rem 0;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+}
