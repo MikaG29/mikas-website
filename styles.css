@@ -1,215 +1,188 @@
 /* ===== Grundlegende Stile ===== */
+:root {
+    --primary-color: #ffffff; /* Hintergrundfarbe */
+    --secondary-color: #2d2d2d; /* Dunkle Akzentfarbe für Text und Buttons */
+    --accent-color: #f8f9fa; /* Leichte Hintergrundfarbe für Boxen */
+    --border-color: #e0e0e0; /* Farbe für Rahmen */
+    --text-dark: #333333; /* Haupttextfarbe */
+    --spacing: 2rem; /* Standardabstand zwischen Elementen */
+    --border-radius: 12px; /* Abgerundete Ecken */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Schatten für Boxen */
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #ffffff;
-    --secondary-color: #000000;
-    --accent-color: #f0f0f0;
-    --text-dark: #333333;
-    --spacing: 1.5rem;
-    --border-radius: 8px;
+    box-sizing: border-box; /* Box-Modell: Padding und Border werden in die Breite/Höhe einbezogen */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: var(--primary-color);
-    color: var(--text-dark);
+    font-family: 'Segoe UI', system-ui, sans-serif; /* Moderne Schriftart */
+    line-height: 1.65; /* Zeilenabstand für bessere Lesbarkeit */
+    color: var(--text-dark); /* Textfarbe */
+    background: var(--primary-color); /* Hintergrundfarbe */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Volle Höhe des Viewports */
 }
 
 /* ===== Header ===== */
 header {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: var(--spacing);
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--secondary-color); /* Dunkler Hintergrund */
+    color: var(--primary-color); /* Weiße Schrift */
+    padding: 1.5rem; /* Innenabstand */
+    box-shadow: var(--shadow); /* Schatten für den Header */
+    position: relative;
 }
 
-h1 { 
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+h1 {
+    font-size: 2rem; /* Große Schrift für den Titel */
+    font-weight: 600; /* Fettgedruckt */
+    margin-bottom: 0.5rem; /* Abstand nach unten */
 }
 
 h2 {
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
+    font-size: 1.75rem; /* Schriftgröße für Überschriften */
+    margin: 2rem 0 1.5rem; /* Abstand oben und unten */
+    color: var(--secondary-color); /* Dunkle Schriftfarbe */
+    border-bottom: 2px solid var(--border-color); /* Unterstrich für Überschriften */
+    padding-bottom: 0.5rem; /* Abstand zwischen Text und Unterstrich */
 }
 
 h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Schriftgröße für Unterüberschriften */
+    margin-bottom: 1.5rem; /* Abstand nach unten */
+    color: var(--secondary-color); /* Dunkle Schriftfarbe */
 }
 
 /* ===== Navigation ===== */
 nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    justify-content: center;
-    margin: 1.5rem 0;
+    flex-wrap: wrap; /* Buttons umbrechen, wenn der Platz knapp wird */
+    gap: 0.75rem; /* Abstand zwischen Buttons */
+    margin: 1.5rem 0; /* Abstand oben und unten */
 }
 
 .nav-button {
-    padding: 0.8rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    transition: all 0.3s ease;
+    padding: 0.75rem 1.25rem; /* Innenabstand für Buttons */
+    background: var(--primary-color); /* Weißer Hintergrund */
+    color: var(--secondary-color); /* Dunkle Schriftfarbe */
+    border: 2px solid var(--secondary-color); /* Rahmenfarbe */
+    border-radius: 8px; /* Abgerundete Ecken */
+    text-decoration: none; /* Keine Unterstreichung */
+    font-weight: 500; /* Mittlere Schriftstärke */
+    transition: all 0.2s ease; /* Sanfte Animationen */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Abstand zwischen Icon und Text */
 }
 
 .nav-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background: var(--secondary-color); /* Dunkler Hintergrund beim Hover */
+    color: var(--primary-color); /* Weiße Schrift beim Hover */
+    transform: translateY(-1px); /* Leichter Effekt beim Hover */
 }
 
 /* ===== Hauptinhalt ===== */
 main {
-    flex: 1;
-    padding: var(--spacing);
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    padding: var(--spacing); /* Innenabstand */
+    max-width: 1200px; /* Maximale Breite des Inhalts */
+    margin: 0 auto; /* Zentrierung */
     width: 100%;
 }
 
-/* ===== Spieler/Mannschaftssektion ===== */
+/* ===== Mannschaftssektion ===== */
 .mannschaft {
     display: grid;
-    gap: var(--spacing);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing); /* Abstand zwischen den Elementen */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
 }
 
 .spieler {
-    background: var(--primary-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    padding: var(--spacing);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: var(--primary-color); /* Weißer Hintergrund */
+    border: 1px solid var(--border-color); /* Rahmen */
+    border-radius: var(--border-radius); /* Abgerundete Ecken */
+    padding: 1.5rem; /* Innenabstand */
+    box-shadow: var(--shadow); /* Schatten */
 }
 
 .team-image {
-    width: 100%;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius); /* Abgerundete Ecken */
+    overflow: hidden; /* Verhindert, dass das Bild über den Rahmen hinausragt */
+    border: 1px solid var(--border-color); /* Rahmen */
+    transition: transform 0.3s ease; /* Animation beim Hover */
 }
 
 .team-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%; /* Bild nimmt die volle Breite ein */
+    height: auto; /* Höhe passt sich automatisch an */
+    display: block; /* Entfernt den Standardabstand unter dem Bild */
 }
 
-/* ===== Spielplan ===== */
-.spielplan {
-    display: grid;
-    gap: 1rem;
-}
-
-.spielplan p {
-    padding: 0.8rem;
-    border-bottom: 1px solid var(--accent-color);
-}
-
-/* ===== Kontaktsektion ===== */
-.kontakt {
-    background: var(--primary-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    padding: var(--spacing);
-    margin: var(--spacing) 0;
-}
-
-.kontakt a {
-    color: var(--text-dark);
-    text-decoration: underline;
+/* ===== Spielerliste ===== */
+.spieler p {
+    font-size: 1rem; /* Schriftgröße */
+    margin: 0.8rem 0; /* Abstand zwischen den Spielernamen */
+    padding: 0.8rem; /* Innenabstand */
+    background: var(--accent-color); /* Leichter Hintergrund */
+    border-radius: 6px; /* Abgerundete Ecken */
 }
 
 /* ===== Footer ===== */
 footer {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    text-align: center;
-    padding: var(--spacing);
-    margin-top: auto;
+    background: var(--secondary-color); /* Dunkler Hintergrund */
+    color: var(--primary-color); /* Weiße Schrift */
+    padding: 1.5rem; /* Innenabstand */
+    margin-top: auto; /* Footer bleibt am unteren Rand */
+    display: flex;
+    justify-content: center; /* Zentrierung der Links */
+    gap: 2rem; /* Abstand zwischen den Links */
 }
 
 footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    margin: 0 1rem;
-    padding: 0.5rem;
-    display: inline-block;
+    color: var(--primary-color); /* Weiße Schrift */
+    text-decoration: none; /* Keine Unterstreichung */
+    padding: 0.5rem; /* Innenabstand */
+    transition: opacity 0.2s ease; /* Sanfte Animation */
+}
+
+footer a:hover {
+    opacity: 0.8; /* Leichte Transparenz beim Hover */
 }
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     :root {
-        --spacing: 1rem;
+        --spacing: 1.25rem; /* Kleinere Abstände auf Mobilgeräten */
     }
 
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.2rem; }
-
-    .mannschaft {
-        grid-template-columns: 1fr;
+    h1 {
+        font-size: 1.75rem; /* Kleinere Schrift für den Titel */
     }
 
-    .team-image {
-        order: -1;
-    }
-}
-
-/* ===== Mobile Optimierungen ===== */
-@media (max-width: 768px) {
-    :root {
-        --spacing: 1rem;
-    }
-
-    h1 { 
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    
-    .mannschaft {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .team-image {
-        order: 1 !important;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .spieler {
-        width: 100%;
-        order: 2;
-    }
-
-    .spieler p {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin: 0.8rem 0;
-    }
-
-    nav {
-        margin: 1rem 0;
+    h2 {
+        font-size: 1.5rem; /* Kleinere Schrift für Überschriften */
     }
 
     .nav-button {
-        width: 100%;
-        text-align: center;
+        width: 100%; /* Buttons nehmen die volle Breite ein */
+        justify-content: center; /* Text zentrieren */
+        padding: 0.6rem; /* Kleinere Buttons */
+        font-size: 0.9rem; /* Kleinere Schrift */
+    }
+
+    .mannschaft {
+        grid-template-columns: 1fr; /* Eine Spalte auf Mobilgeräten */
+    }
+
+    .team-image {
+        order: 1; /* Bild wird unter der Spielerliste angezeigt */
+        margin-top: 1rem; /* Abstand nach oben */
+    }
+
+    .spieler p {
+        margin: 0.6rem 0; /* Kleinere Abstände */
+        padding: 0.6rem; /* Kleinere Innenabstände */
     }
 }
