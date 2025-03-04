@@ -3,46 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spielplan | SG Hegensberg-Liebersbronn</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinkung des CSS -->
+    <title>Spielplan - SG Hegensberg-Liebersbronn</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinkung zur CSS-Datei -->
 </head>
 <body>
-    <!-- Header mit Titel und Navigation -->
-    <header>
-        <h1>Spielplan</h1>
-        <nav>
-            <a href="index.html" class="nav-button">← Zurück zur Startseite</a>
-        </nav>
+    <!-- Home Icon einfügen -->
+    <div class="home-icon">
+        <a href="startseite.html">
+            <img src="home.png" alt="Home" width="40" height="40">
+        </a>
+    </div>
+    <header class="header">
+        <div class="header-bg"></div> <!-- Hintergrundbild -->
+        <div class="header-content">
+            <h1>Spielplan</h1> <!-- Überschrift -->
+        </div>
     </header>
 
-    <!-- Hauptinhalt -->
-    <main>
-        <div class="mannschaft">
-            <!-- Spielplan A-Jugend -->
-            <div class="spieler">
-                <h3>Spielplan A-Jugend</h3>
-                <p>Sonntag, 22.09.2024</p>
-                <p>Sonntag, 29.09.2024</p>
-                <p>Sonntag, 13.10.2024</p>
-                <p>Samstag, 19.10.2024</p>
-                <p>Samstag, 09.11.2024</p>
-                <p>Sonntag, 17.11.2024</p>
-                <p>Samstag, 14.12.2024</p>
-                <p>Samstag, 18.01.2025</p>
-                <p>Sonntag, 26.01.2025</p>
-                <p>Sonntag, 09.02.2025</p>
-                <p>Sonntag, 16.02.2025</p>
-                <p>Sonntag, 23.02.2025</p>
-                <p>Sonntag, 09.03.2025</p>
-                <p>Samstag, 22.03.2025</p>
+    <!-- Spielplan-Inhalt -->
+    <section class="schedule-section">
+        <div class="schedule-content">
+            <!-- Spielplan für A-Jugend -->
+            <div class="schedule">
+                <h2>Spielplan A-Jugend</h2>
+                <ul>
+                    <p>Sonntag, 22.09.2024</p>
+                    <p>Sonntag, 29.09.2024</p>
+                    <p>Sonntag, 13.10.2024</p>
+                    <p>Samstag, 19.10.2024</p>
+                    <p>Samstag, 09.11.2024</p>
+                    <p>Sonntag, 17.11.2024</p>
+                    <p>Samstag, 14.12.2024</p>
+                    <p>Samstag, 18.01.2025</p>
+                    <p>Sonntag, 26.01.2025</p>
+                    <p>Sonntag, 09.02.2025</p>
+                    <p>Sonntag, 16.02.2025</p>
+                    <p>Sonntag, 23.02.2025</p>
+                    <p>Sonntag, 09.03.2025</p>
+                    <p>Samstag, 22.03.2025</p>
+                    
+                </ul>
             </div>
-            
-            <!-- Spielplan B-Jugend -->
-            <div class="spieler">
-                <h3>Spielplan B-Jugend</h3>
-                <p>Samstag, 28.09.2024</p>
-                <p>Sonntag, 13.10.2024</p>
-                <p>Samstag, 19.10.2024</p>
-                <p>Sonntag, 10.11.2024 SG Untere Fils vs. SG Hegensberg-Liebersbronn</p>
-                <p>Sonntag, 17.11.2024 SG Hegensberg-Liebersbronn vs. TB Neuffen</p>
-                <p>Sonntag,
+
+            <!-- Spielplan für B-Jugend -->
+            <div class="schedule">
+                <h2>Spielplan B-Jugend</h2>
+                <ul>
+                    <p>Samstag, 28.09.2024</p>
+                    <p>Sonntag, 13.10.2024</p>
+                    <p>Samstag, 19.10.2024</p>
+                    <p>Sonntag, 10.11.2024</p>
+                    <p>Sonntag, 17.11.2024</p>
+                    <p>Sonntag, 24.11.2024</p> 
+                    <p>Sonntag, 01.12.2024</p>
+                    <p>Samstag, 14.12.2024</p>
+                    <p>Samstag, 18.01.2025</p>
+                    <p>Samstag, 08.02.2025</p>
+                    <p>Samstag, 22.02.2025</p>
+                    <p>Sonntag, 09.03.2025</p>
+                    <p>Samstag, 15.03.2025</p>
+                    <p>Sonntag, 23.03.2025</p>
+                    <p>Sonntag, 30.03.2025</p>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="startseite.html" class="footer-link">Zurück zur Startseite</a>
+        </div>
+    </footer>
+</body>
+</html>
