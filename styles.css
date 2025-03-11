@@ -36,14 +36,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Navigation Buttons */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
 .button {
     color: #ffffff;
     text-decoration: none;
@@ -278,12 +270,77 @@ body {
     clear: both;
 }
 
-/* Responsive Anpassungen */
-@media (max-width: 768px) {
-    .player-list, .schedule {
-        float: none; /* Kein Float auf Mobilgeräten */
-        width: 100%; /* Volle Breite auf Mobilgeräten */
-        max-width: 100%;
-        margin-right: 0;
+/* Cookie Banner Styling */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2d2d2d;
+    color: white;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .cookie-banner.show {
+    bottom: 0;
+  }
+  
+  .cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .cookie-content p {
+    flex: 1;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .cookie-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .cookie-btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+  }
+  
+  .cookie-btn.accept {
+    background: #ffffff;
+    color: #2d2d2d;
+  }
+  
+  .cookie-btn.deny {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  @media (max-width: 768px) {
+    .cookie-content {
+      flex-direction: column;
+      text-align: center;
     }
-}
+    
+    .cookie-buttons {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .cookie-btn {
+      width: 100%;
+    }
+  }

@@ -46,5 +46,45 @@
             </a>
         </div>
     </footer>
+    <script>
+        // Cookie Consent Funktionen
+        document.addEventListener('DOMContentLoaded', function() {
+          const cookieBanner = document.getElementById('cookie-banner');
+          const acceptBtn = document.getElementById('accept-cookies');
+          const denyBtn = document.getElementById('deny-cookies');
+        
+          // Prüfe ob Zustimmung bereits gegeben wurde
+          if(!localStorage.getItem('cookies-accepted')) {
+            setTimeout(() => {
+              cookieBanner.classList.add('show');
+            }, 1000);
+          }
+        
+          // Akzeptieren-Button
+          acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'true');
+            cookieBanner.classList.remove('show');
+            // Hier können Tracking-Skripte geladen werden
+          });
+        
+          // Ablehnen-Button
+          denyBtn.addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'false');
+            cookieBanner.classList.remove('show');
+          });
+        });
+        </script>
 </body>
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. 
+        <a href="datenschutz.html">Mehr erfahren</a>
+      </p>
+      <div class="cookie-buttons">
+        <button id="accept-cookies" class="cookie-btn accept">Akzeptieren</button>
+        <button id="deny-cookies" class="cookie-btn deny">Ablehnen</button>
+      </div>
+    </div>
+  </div>
 </html>
